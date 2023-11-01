@@ -11,17 +11,23 @@ public class ptbac2 {
         System.out.print("Nhập hệ số c: ");
         double c = scanner.nextDouble();
 
-        double delta = b * b - 4 * a * c;
+        if (a !=  0) {
+        	double delta = b * b - 4 * a * c;
 
-        if (delta > 0) {
-            double x1 = (-b + Math.sqrt(delta)) / (2 * a);
-            double x2 = (-b - Math.sqrt(delta)) / (2 * a);
-            System.out.println("Phương trình có 2 nghiệm phân biệt: x1 = " + x1 + ", x2 = " + x2);
-        } else if (delta == 0) {
-            double x = -b / (2 * a);
-            System.out.println("Phương trình có nghiệm kép: x = " + x);
-        } else {
-            System.out.println("Phương trình vô nghiệm.");
+            if (delta > 0) {
+                double x1 = (-b + Math.sqrt(delta)) / (2 * a);
+                double x2 = (-b - Math.sqrt(delta)) / (2 * a);
+                System.out.println("Phương trình có 2 nghiệm phân biệt: x1 = " + x1 + ", x2 = " + x2);
+            } else if (delta == 0) {
+                double x = -b / (2 * a);
+                System.out.println("Phương trình có nghiệm kép: x = " + x);
+            } else {
+                System.out.println("Phương trình vô nghiệm.");
+            }
+        } else if (b != 0) {
+        	double x0 = -c / b;
+        	System.out.println("Phương trình có dạng bậc nhất bx + c = 0");
+        	System.out.println("Phương trình có nghiệm là: x0 = " + x0);
         }
     }
 }
