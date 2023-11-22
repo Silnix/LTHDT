@@ -1,12 +1,12 @@
 import java.util.Scanner;
 
 
-public class Employee {
+public class Employees {
 	private String lastName;
     private Date ngaySinh;
     private Date ngayLam;
 
-    public Employee(String lastName, Date ngaySinh, Date ngayLam) {
+    public Employees(String lastName, Date ngaySinh, Date ngayLam) {
         this.lastName = lastName;
         this.ngaySinh = ngaySinh;
         this.ngayLam = ngayLam;
